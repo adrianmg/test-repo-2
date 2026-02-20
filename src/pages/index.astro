@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout pageTitle="Home | test-repo-2" pageDescription="Welcome to my Astro site">
+<main>
+<header>
+<h1>🚀 Hello, Astro!</h1>
+<p class="subtitle">Your new Astro site is up and running.</p>
+</header>
+
+<section class="cards">
+<article class="card">
+<h2>📖 Documentation</h2>
+<p>
+Learn everything about Astro at the official
+<a href="https://docs.astro.build" target="_blank" rel="noopener noreferrer">docs.astro.build</a>.
+</p>
+</article>
+
+<article class="card">
+<h2>🧩 Components</h2>
+<p>
+Add <code>.astro</code> or <code>.md</code> files to
+<code>src/pages/</code> to create new routes.
+</p>
+</article>
+
+<article class="card">
+<h2>🎨 Styling</h2>
+<p>
+Use scoped <code>&lt;style&gt;</code> blocks in <code>.astro</code>
+files for zero-runtime CSS.
+</p>
+</article>
+</section>
+</main>
+</Layout>
+
+<style>
+main {
+max-width: 900px;
+margin: 0 auto;
+padding: 3rem 1.5rem;
+}
+
+header {
+text-align: center;
+margin-bottom: 3rem;
+}
+
+h1 {
+font-size: 3rem;
+font-weight: 800;
+margin: 0 0 0.5rem;
+background: linear-gradient(135deg, #a78bfa, #f472b6);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+
+.subtitle {
+font-size: 1.2rem;
+color: #9ca3af;
+margin: 0;
+}
+
+.cards {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+gap: 1.5rem;
+}
+
+.card {
+border: 1px solid rgba(167, 139, 250, 0.2);
+border-radius: 10px;
+padding: 1.5rem;
+background: rgba(255, 255, 255, 0.03);
+transition: border-color 0.2s ease;
+}
+
+.card:hover {
+border-color: rgba(167, 139, 250, 0.5);
+}
+
+.card h2 {
+margin: 0 0 0.75rem;
+font-size: 1.2rem;
+}
+
+.card p {
+margin: 0;
+color: #9ca3af;
+line-height: 1.6;
+}
+
+code {
+font-family: 'Courier New', monospace;
+font-size: 0.85em;
+background: rgba(167, 139, 250, 0.1);
+color: #c4b5fd;
+padding: 0.1em 0.35em;
+border-radius: 4px;
+}
+</style>

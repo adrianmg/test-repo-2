@@ -1,0 +1,37 @@
+---
+interface Props {
+pageTitle: string;
+pageDescription?: string;
+}
+
+const { pageTitle, pageDescription = 'A site built with Astro' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content={pageDescription} />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="generator" content={Astro.generator} />
+<title>{pageTitle}</title>
+</head>
+<body>
+<slot />
+</body>
+</html>
+
+<style is:global>
+*, *::before, *::after { box-sizing: border-box; }
+html, body {
+margin: 0;
+padding: 0;
+font-family: system-ui, -apple-system, sans-serif;
+background: #0f0f13;
+color: #e8e8f0;
+min-height: 100vh;
+}
+a { color: #a78bfa; }
+a:hover { text-decoration: underline; }
+</style>
